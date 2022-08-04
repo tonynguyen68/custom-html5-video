@@ -9,7 +9,7 @@ Build a custom HTML5 video player with JavaScript. Features:
 
 ## Live demo
 
-This project is live at http://custom-html5-video.surge.sh/
+This project is live at https://custom-html5-video.nguyenanhvu.com/
 
 ## Prerequisites
 
