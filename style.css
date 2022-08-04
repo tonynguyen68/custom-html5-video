@@ -3,12 +3,12 @@
    ========================================================================== */
 
 :root {
-  --youtube-red: #FE0900;
+  --video-seek-passed: deepskyblue;
 }
 
 html {
   box-sizing: border-box;
-  font-family: "YouTube Noto",Roboto,Arial,Helvetica,sans-serif;
+  font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
   height: 100%;
 }
 
@@ -85,13 +85,13 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background: var(--youtube-red);
+  background: var(--video-seek-passed);
   border-radius: 2px;
 }
 
 progress::-moz-progress-bar {
-  border: 1px solid var(--youtube-red);
-  background: var(--youtube-red);
+  border: 1px solid var(--video-seek-passed);
+  background: var(--video-seek-passed);
 }
 
 .seek {
@@ -117,6 +117,28 @@ progress::-moz-progress-bar {
   font-weight: bold;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.seek-tooltip.show {
+  display: block;
+}
+
+.seek-red-dot {
+  position: absolute;
+  width: 8.4px;
+  height: 8.4px;
+  content: '';
+  background-color: red;
+  border-radius: 50%;
+  transition: all 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.seek-red-dot.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .bottom-controls {
@@ -207,6 +229,25 @@ button:hover::before {
   opacity: 0;
 }
 
+.thumbnail {
+  position: absolute;
+  width: 25%;
+  top: 14px;
+  left: 14px;
+  transition: all 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
 input[type=range] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -228,10 +269,10 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]::-webkit-slider-thumb {
-  height: 16px;
-  width: 16px;
-  border-radius: 16px;
-  background: var(--youtube-red);
+  height: 14px;
+  width: 14px;
+  border-radius: 14px;
+  background: var(--video-seek-passed);
   cursor: pointer;
   -webkit-appearance: none;
   margin-left: -1px;
@@ -252,8 +293,8 @@ input[type=range].volume::-webkit-slider-runnable-track {
 
 input[type=range].volume::-webkit-slider-thumb {
   margin-left: 0;
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
   background: #fff;
 }
 
@@ -270,8 +311,8 @@ input[type=range]::-moz-range-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50px;
-  border: 1px solid var(--youtube-red);
-  background: var(--youtube-red);
+  border: 1px solid var(--video-seek-passed);
+  background: var(--video-seek-passed);
   cursor: pointer;
   margin-top: 5px;
 }
