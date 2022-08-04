@@ -21,5 +21,5 @@ You must have Node.js and npm installed on your machine. This project was built 
 ## Setup
 
 - Clone this repo to your machine
-- `cd` into the project folder and run `npm install`
-- Run `npm start`
+- `cd` into the project folder and run `npm install` or `yarn`
+- Run `npm start` or `yarn start`

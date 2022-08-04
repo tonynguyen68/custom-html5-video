@@ -123,6 +123,10 @@ function updateSeekTooltip(event) {
 
 // init seek red dot position
 function initSeekRedDot(videoDuration) {
+  if (videoDuration <= 4) {
+    return false; // only init with video longer than 4s
+  }
+
   seekRedDot.style.left = `calc(${showThumbnailFrom / videoDuration * 100}% + 2px)`;
   seekRedDot.classList.add('show');
 
